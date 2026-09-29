@@ -1,0 +1,64 @@
+# Python / uv
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Secrets / local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+.github_token
+.huggingface/
+
+# ML caches
+.cache/
+cache/
+hf_cache/
+huggingface/
+torch_extensions/
+
+# Models / checkpoints / optimizer state
+models/
+checkpoints/
+artifacts/
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.bin
+
+# Data / rollout payloads
+data/
+datasets/
+*.parquet
+*.arrow
+runs/
+rollouts/
+ray_results/
+
+# Experiment service caches
+wandb/
+mlruns/
+
+# Raw logs (curated small evidence can live under reports/ or docs/)
+logs/
+*.out
+*.err
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local scratch
+tmp/
+scratch/
