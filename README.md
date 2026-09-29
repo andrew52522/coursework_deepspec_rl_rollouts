@@ -29,10 +29,11 @@ The project is being built in stages so that the expensive final GPU run is not 
    - EAGLE-3 / DFlash / DSpark
    - speculative decoding acceptance and runtime measurements
 
-## Read first
+## Read in this order
 
-- [Environment preparation: clean WSL2 + RTX 4070](docs/00_wsl4070_environment_preflight.md)
-- [Operational context for ChatGPT](CHATGPT_CONTEXT.md)
+1. [00 — Prepare a clean WSL2 + RTX 4070 environment](docs/00_wsl4070_environment_preflight.md)
+2. [01 — Full GRPO preflight on 1×4070, then optional 2×4070](docs/01_grpo_1x4070_then_2x4070.md)
+3. [Operational context for ChatGPT](CHATGPT_CONTEXT.md)
 
 ## Reproducibility policy
 
