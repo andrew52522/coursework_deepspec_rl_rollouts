@@ -1,0 +1,62 @@
+========================================================================
+GRPO RUN SUMMARY
+========================================================================
+log                          logs/grpo_1x4070_2026-10-07_19-29-53.log
+run_status                   PASS
+process_exit_code            0
+rl_iteration                 1
+trajectories                 64
+configured_optimizer_updates  2
+
+PIPELINE
+------------------------------------------------------------------------
+rollout_generation           PASS
+old_log_prob                 PASS
+reference_log_prob           PASS
+advantage_computation        PASS
+actor_update                 PASS
+rollout_weight_sync          PASS
+fatal_cuda_error             NO
+
+LEARNING SIGNAL
+------------------------------------------------------------------------
+successful_trajectories      4/64 (6.25%)
+reward_min/mean/max           0 / 0.0625 / 1
+reward_variation              YES
+advantage_min/mean/max        -0.4651 / -0.011 / 3.75
+nonzero_advantage             YES
+policy_gradient_loss          0.0171233
+kl_loss                       0.00080865
+actor_loss                    0.01712411
+gradient_norm                 2.18767
+learning_rate                 0.000001
+nonzero_policy_gradient       YES
+
+SEQUENCE LENGTHS
+------------------------------------------------------------------------
+prompt_length_min/mean/max    76 / 88.5 / 107
+prompt_clip_ratio             0.25
+response_length_min/mean/max  62 / 203.5 / 512
+response_clip_ratio           0.0156
+
+MEMORY
+------------------------------------------------------------------------
+actor_max_allocated_gib       5.906
+actor_max_reserved_gib        6.674
+cpu_memory_used_gib           33.218
+gpu_capacity_gib              7.620
+reserved_headroom_gib         0.946
+reserved_fraction             0.876
+
+TIMING
+------------------------------------------------------------------------
+generation_s                 22.0869
+old_log_prob_s               3.2964
+reference_s                  5.9235
+advantage_s                  0.0338
+actor_update_s               9.0524
+weight_sync_s                0.2858
+rl_iteration_s               47.3920
+total_tokens                  18,685.0
+throughput_tokens_per_s       394.26
+========================================================================

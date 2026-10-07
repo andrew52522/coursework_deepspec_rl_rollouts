@@ -1,0 +1,31 @@
+COURSEWORK REPRODUCTION EVIDENCE
+
+git_commit=3bda099a207a17d9a7db7e3d3f64e8915e350a54
+git_branch=main
+generated_at=2026-10-07T20:27:29+03:00
+
+=== ENVIRONMENT ===
+# Pinned upstream source
+VERL_COMMIT=6093e007cc341973c9d9a6fb3867a85976c7c458
+
+# Container/runtime
+CUDA_BASE_IMAGE=nvidia/cuda:13.0.2-devel-ubuntu24.04
+CUDA_TOOLKIT_VERSION=13.0.2
+UV_VERSION=0.11.16
+PYTHON_VERSION=3.12.3
+
+# Validated Python stack from the pinned verl environment
+TORCH_VERSION=2.13.0+cu130
+RAY_VERSION=2.55.1
+VLLM_VERSION=0.29.0
+TRANSFORMERS_VERSION=5.12.1
+
+# Reference model/task
+MODEL_ID=Qwen/Qwen3-0.6B
+DATASET=GSM8K
+
+=== GPU ===
+NVIDIA GeForce RTX 4070 Laptop GPU, 595.91.07, 8188 MiB, 8.9
+
+=== DOCKER ===
+Docker version 29.8.2, build 7fc2dff

@@ -1,0 +1,213 @@
+============================================================
+COURSEWORK SETUP
+============================================================
+repo:    /home/student/coursework/coursework_deepspec_rl_rollouts
+work:    /home/student/coursework
+verl:    /home/student/coursework/third_party/verl
+model:   /home/student/coursework/models/Qwen3-0.6B
+dataset: /home/student/coursework/datasets/gsm8k
+image:   coursework-verl-cu130:latest
+
+=== PINNED VERL ===
+HEAD сейчас на 6093e007 [rollout, vllm] fix: stage bf16 MoE weights in place when the kernel layout changes shape (#7987)
+verl commit: 6093e007cc341973c9d9a6fb3867a85976c7c458
+
+=== BUILD CONTAINER ===
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.cu130
+#1 transferring dockerfile: 619B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/nvidia/cuda:13.0.2-devel-ubuntu24.04
+#2 DONE 0.0s
+
+#3 [internal] load metadata for ghcr.io/astral-sh/uv:0.11.16
+#3 DONE 5.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 FROM ghcr.io/astral-sh/uv:0.11.16@sha256:440fd6477af86a2f1b38080c539f1672cd22acb1b1a47e321dba5158ab08864d
+#5 resolve ghcr.io/astral-sh/uv:0.11.16@sha256:440fd6477af86a2f1b38080c539f1672cd22acb1b1a47e321dba5158ab08864d 0.0s done
+#5 DONE 0.0s
+
+#6 [stage-0 1/4] FROM docker.io/nvidia/cuda:13.0.2-devel-ubuntu24.04@sha256:5dc1bca23d05bd37b011be68ec470c03b403a5da07ec3a86e41af9470e9d0cc6
+#6 resolve docker.io/nvidia/cuda:13.0.2-devel-ubuntu24.04@sha256:5dc1bca23d05bd37b011be68ec470c03b403a5da07ec3a86e41af9470e9d0cc6 0.0s done
+#6 DONE 0.0s
+
+#7 [stage-0 2/4] RUN apt-get update && apt-get install -y --no-install-recommends     ca-certificates     curl     git     build-essential     python3     python3-dev     python3-venv     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [stage-0 3/4] COPY --from=ghcr.io/astral-sh/uv:0.11.16 /uv /uvx /bin/
+#8 CACHED
+
+#9 [stage-0 4/4] WORKDIR /workspace/verl
+#9 CACHED
+
+#10 exporting to image
+#10 exporting layers done
+#10 exporting manifest sha256:735c665185d3b626500a9164f3e8e4a55289753a41d8d58bc40464d7f207158a done
+#10 exporting config sha256:868b2f2327b69fee8edc71346b9b99b0845806919fef5e340dd87387fd6712c0 done
+#10 exporting attestation manifest sha256:8da0b736ef24a54ab31fbbe36ff33ce75450ed85c27ee4022c57f2b3edd2e2b0 0.0s done
+#10 exporting manifest list sha256:20d7da1b74f62c79177052546d79a57f8238491e48b67239a797644384495cc1 0.0s done
+#10 naming to docker.io/library/coursework-verl-cu130:latest
+#10 naming to docker.io/library/coursework-verl-cu130:latest done
+#10 unpacking to docker.io/library/coursework-verl-cu130:latest 0.0s done
+#10 DONE 0.1s
+
+=== CUDA SMOKE ===
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 13.0.2
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+=== NVCC ===
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Aug_20_01:58:59_PM_PDT_2025
+Cuda compilation tools, release 13.0, V13.0.88
+Build cuda_13.0.r13.0/compiler.36424714_0
+
+=== BUILD CUDA SMOKE ===
+
+=== RUN CUDA SMOKE ===
+CUDA result: 42
+
+=== CUDA CONTAINER SMOKE: PASS ===
+
+=== VERL / UV ENVIRONMENT ===
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 13.0.2
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+   Use the NVIDIA Container Toolkit to start this container with GPU support; see
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+torch: 2.13.0+cu130
+transformers: 5.12.1
+vllm: 0.29.0
+
+=== DOWNLOAD MODEL: Qwen/Qwen3-0.6B ===
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 13.0.2
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+   Use the NVIDIA Container Toolkit to start this container with GPU support; see
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 10 files:  10%|█         | 1/10 [00:00<00:03,  2.48it/s]Fetching 10 files:  20%|██        | 2/10 [00:00<00:01,  4.30it/s]Fetching 10 files:  60%|██████    | 6/10 [00:00<00:00,  9.84it/s]Fetching 10 files:  80%|████████  | 8/10 [00:01<00:00,  6.39it/s]Fetching 10 files:  90%|█████████ | 9/10 [00:05<00:00,  1.13it/s]Fetching 10 files: 100%|██████████| 10/10 [01:54<00:00, 25.13s/it]Fetching 10 files: 100%|██████████| 10/10 [01:54<00:00, 11.41s/it]
+
+=== GSM8K ALREADY PRESENT ===
+/home/student/coursework/datasets/gsm8k
+
+=== VLLM SMOKE ===
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 13.0.2
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+=== ENV ===
+VLLM_USE_V2_MODEL_RUNNER = <UNSET>
+=== TOKENIZER ===
+=== CREATE VLLM ENGINE ===
+INFO 10-07 16:28:41 [api_utils.py:286] non-default args: {'tokenizer': '/model', 'dtype': 'bfloat16', 'max_model_len': 512, 'gpu_memory_utilization': 0.35, 'max_num_batched_tokens': 1024, 'max_num_seqs': 4, 'disable_log_stats': True, 'enforce_eager': True, 'model': '/model'}
+INFO 10-07 16:28:46 [model.py:684] Resolved architecture: Qwen3ForCausalLM
+INFO 10-07 16:28:46 [model.py:2021] Using max model len 512
+INFO 10-07 16:28:46 [scheduler.py:277] Chunked prefill is enabled with max_num_batched_tokens=1024.
+WARNING 10-07 16:28:46 [vllm.py:1371] Enforce eager set, disabling torch.compile and CUDAGraphs. This is equivalent to setting -cc.mode=none -cc.cudagraph_mode=none
+WARNING 10-07 16:28:46 [vllm.py:1406] Inductor compilation was disabled by user settings, optimizations settings that are only active during inductor compilation will be ignored.
+INFO 10-07 16:28:46 [kernel.py:369] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+INFO 10-07 16:28:46 [vllm.py:1585] Cudagraph is disabled under eager mode
+INFO 10-07 16:28:46 [compilation.py:329] Enabled custom fusions: norm_quant, act_quant
+(EngineCore pid=180) INFO 10-07 16:28:48 [core.py:123] Initializing a V1 LLM engine (v0.29.0) with config: model='/model', speculative_config=None, tokenizer='/model', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=512, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, decode_context_parallel_size=1, dcp_comm_backend=ag_rs, disable_custom_all_reduce=False, quantization=None, quantization_config=None, enforce_eager=True, enable_return_routed_experts=False, kv_cache_dtype=auto, device_config=cuda, structured_outputs_config=StructuredOutputsConfig(backend='auto', disable_any_whitespace=False, disable_additional_properties=False, reasoning_parser='', reasoning_parser_plugin='', enable_in_reasoning=False), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None, per_request_spec_decode_metrics='none', kv_cache_metrics=False, kv_cache_metrics_sample=0.01, cudagraph_metrics=False, enable_layerwise_nvtx_tracing=False, enable_mfu_metrics=False, enable_mm_processor_stats=False, enable_logging_iteration_details=False, jit_monitor_mode='warn', jit_monitor_verbose=False), seed=0, served_model_name=/model, enable_prefix_caching=True, enable_chunked_prefill=True, pooler_config=None, compilation_config={'mode': <CompilationMode.NONE: 0>, 'debug_dump_path': None, 'cache_dir': '', 'compile_cache_save_format': 'binary', 'backend': 'inductor', 'custom_ops': ['all'], 'ir_enable_torch_wrap': False, 'splitting_ops': [], 'compile_mm_encoder': False, 'cudagraph_mm_encoder': False, 'encoder_cudagraph_token_budgets': [], 'encoder_cudagraph_max_vision_items_per_batch': 0, 'encoder_cudagraph_max_frames_per_batch': None, 'compile_sizes': [], 'compile_ranges_endpoints': [1024], 'inductor_compile_config': {'enable_auto_functionalized_v2': False, 'combo_kernels': True, 'benchmark_combo_kernel': True}, 'inductor_passes': {}, 'cudagraph_mode': <CUDAGraphMode.NONE: 0>, 'cudagraph_num_of_warmups': 0, 'cudagraph_capture_sizes': [], 'cudagraph_copy_inputs': False, 'cudagraph_specialize_lora': True, 'use_inductor_graph_partition': False, 'pass_config': {'fuse_norm_quant': True, 'fuse_act_quant': True, 'fuse_attn_quant': False, 'enable_sp': False, 'fuse_gemm_comms': False, 'fuse_allreduce_rms': False, 'enable_qk_norm_rope_fusion': False, 'fuse_rope_kvcache_cat_mla': False, 'fuse_act_padding': False, 'fuse_qk_norm_rope_kvcache': False}, 'max_cudagraph_capture_size': 0, 'dynamic_shapes_config': {'type': <DynamicShapesType.BACKED: 'backed'>, 'evaluate_guards': False, 'assume_32_bit_indexing': False}, 'local_cache_dir': None, 'fast_moe_cold_start': False, 'static_all_moe_layers': []}, kernel_config=KernelConfig(ir_op_priority=IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native']), enable_flashinfer_autotune=True, enable_cutedsl_warmup=True, enable_jit_warmup=True, enable_bf16x3_router_gemm=False, moe_backend='auto', linear_backend='auto')
+(EngineCore pid=180) INFO 10-07 16:28:48 [parallel_state.py:1775] world_size=1 rank=0 local_rank=0 distributed_init_method=file:///tmp/vllm_dist_4706effaba294b5e8d54c079f181455f backend=nccl
+(EngineCore pid=180) INFO 10-07 16:28:48 [parallel_state.py:2119] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, PCP rank 0, TP rank 0, EP rank N/A, EPLB rank N/A
+(EngineCore pid=180) INFO 10-07 16:28:48 [gpu_worker.py:429] Using V2 Model Runner
+(EngineCore pid=180) INFO 10-07 16:28:49 [model_runner.py:382] Loading model from scratch...
+(EngineCore pid=180) INFO 10-07 16:28:50 [cuda.py:492] Using FLASH_ATTN attention backend out of potential backends: ['FLASH_ATTN', 'FLASHINFER', 'TRITON_ATTN', 'FLEX_ATTENTION'].
+(EngineCore pid=180) INFO 10-07 16:28:50 [flash_attn.py:897] Using FlashAttention version 2
+(EngineCore pid=180) INFO 10-07 16:28:50 [weight_utils.py:863] Filesystem type for checkpoints: EXT4. Checkpoint size: 1.40 GiB. Available RAM: 55.82 GiB.
+(EngineCore pid=180) INFO 10-07 16:28:50 [weight_utils.py:886] Auto-prefetch is disabled because the filesystem (EXT4) is not a recognized network FS (NFS/Lustre). If you want to force prefetching, start vLLM with --safetensors-load-strategy=prefetch.
+(EngineCore pid=180) Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+(EngineCore pid=180) Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  5.74it/s]
+(EngineCore pid=180) Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  5.74it/s]
+(EngineCore pid=180) 
+(EngineCore pid=180) INFO 10-07 16:28:50 [default_loader.py:430] Loading weights took 0.18 seconds
+(EngineCore pid=180) INFO 10-07 16:28:51 [model_runner.py:404] Model loading took 1.12 GiB memory and 1.803363 seconds
+(EngineCore pid=180) INFO 10-07 16:28:51 [topk_topp_sampler.py:62] Using FlashInfer for top-p & top-k sampling.
+(EngineCore pid=180) INFO 10-07 16:28:51 [utils.py:306] Using LBNHC KV cache layout.
+(EngineCore pid=180) INFO 10-07 16:28:52 [gpu_worker.py:625] Available KV cache memory: 1.39 GiB
+(EngineCore pid=180) INFO 10-07 16:28:52 [kv_cache_utils.py:2032] GPU KV cache size: 13,040 tokens, Maximum concurrency for 512 tokens per request: 25.47x
+(EngineCore pid=180) INFO 10-07 16:28:52 [kernel_warmup.py:124] JIT kernel warmup starting.
+(EngineCore pid=180) INFO 10-07 16:28:52 [kernel_warmup.py:134] JIT kernel warmup finished in 0.00s.
+(EngineCore pid=180) INFO 10-07 16:28:53 [gpu_worker.py:860] Free memory on device (7.48/7.62 GiB) on startup. Desired GPU memory utilization is (0.35, 2.67 GiB). Actual usage is 1.25 GiB for consumed memory (weights + non-torch), 0.03 GiB for peak activation, and 0.0 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=1338659226` (1.25 GiB) to fit into requested memory, or `--kv-cache-memory=6504642560` (6.06 GiB) to fully utilize gpu memory. Current kv cache memory in use is 1.39 GiB.
+(EngineCore pid=180) INFO 10-07 16:29:50 [jit_monitor.py:85] Kernel JIT monitor activated; monitored JIT compilations during inference will use mode=warn.
+(EngineCore pid=180) INFO 10-07 16:29:51 [torch_utils.py:277] Reducing Torch threads from 14 to 1 for serving. Set OMP_NUM_THREADS in the external environment to override.
+(EngineCore pid=180) INFO 10-07 16:29:51 [core.py:368] init engine (profile, create kv cache, warmup model) took 59.93 s
+(EngineCore pid=180) INFO 10-07 16:29:51 [kernel.py:369] Final IR op priority after setting platform defaults: IrOpPriorityConfig(rms_norm=['vllm_c', 'native'], fused_add_rms_norm=['vllm_c', 'native'])
+INFO 10-07 16:29:51 [hf.py:547] Detected the chat template content format to be 'string'. You can set `--chat-template-content-format` to override this.
+=== GENERATE ===
+Rendering prompts:   0%|          | 0/1 [00:00<?, ?it/s]Rendering prompts: 100%|██████████| 1/1 [00:00<00:00, 96.81it/s]
+Processed prompts:   0%|          | 0/1 [00:00<?, ?it/s, est. speed input: 0.00 toks/s, output: 0.00 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00, 10.48it/s, est. speed input: 241.00 toks/s, output: 94.29 toks/s]Processed prompts: 100%|██████████| 1/1 [00:00<00:00, 10.47it/s, est. speed input: 241.00 toks/s, output: 94.29 toks/s]
+=== OUTPUT ===
+2 + 2 = 4.
+=== VLLM NATIVE SMOKE: OK ===
+INFO 10-07 16:29:51 [utils.py:620] [shutdown] Process manager: send sigterm to process EngineCore
+(EngineCore pid=180) INFO 10-07 16:29:51 [core.py:1350] [shutdown] EngineCore: trigger received signal=SIGTERM
+(EngineCore pid=180) INFO 10-07 16:29:51 [core.py:1501] [shutdown] EngineCore: start mode=abort timeout=0s
+(EngineCore pid=180) INFO 10-07 16:29:51 [core.py:1532] [shutdown] EngineCore: request processing complete; starting resource teardown
+(EngineCore pid=180) INFO 10-07 16:29:51 [core.py:1363] [shutdown] EngineCore: exiting busy loop
+
+============================================================
+SETUP: PASS
+============================================================
+verl:    /home/student/coursework/third_party/verl
+model:   /home/student/coursework/models/Qwen3-0.6B
+dataset: /home/student/coursework/datasets/gsm8k
