@@ -280,13 +280,18 @@ The repository contains a small validated experiment that can be reproduced befo
 The host should already provide:
 
 ```text
-Linux
-NVIDIA driver
-Docker
-NVIDIA Container Toolkit
-Git
-Python 3
-Internet access during setup
+OS                         Ubuntu 26.04.1 LTS
+NVIDIA driver              595.91.07
+Docker                     29.8.2
+NVIDIA Container Toolkit   1.20.1
+Python                     3.12.3
+Container base             nvidia/cuda:13.0.2-devel-ubuntu24.04
+CUDA Toolkit               13.0.2
+uv                         0.11.16
+PyTorch                    2.13.0+cu130
+Ray                        2.55.1
+vLLM                       0.29.0
+Transformers               5.12.1
 ```
 
 Clone the repository and run:
