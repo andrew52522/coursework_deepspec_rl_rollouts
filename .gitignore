@@ -62,3 +62,5 @@ Thumbs.db
 # Local scratch
 tmp/
 scratch/
+
+third_party/
