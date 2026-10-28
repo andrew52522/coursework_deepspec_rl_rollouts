@@ -440,6 +440,8 @@ Do different draft architectures degrade differently as the verifier changes?
 
 How much rollout speedup survives at the full RL-iteration level?
 
+Measure and discover new metrics and find function of cost proposing draft tokens vs confidence of draft head
+
 Does the conclusion change when moving from the controlled Qwen3-4B setup
 to a medium-size Qwen3.5+ model?
 ```
